@@ -35,6 +35,20 @@ public class Array_1D {
         }
     }
 
+    public void insertAtIndex(int num,int index){
+        if(index > size){
+            System.out.println("Invalid Index");
+        } else if(isFull()){
+            System.out.println("Array is Full");
+        } else{
+            for(int i=size;i>index;i--){
+                arr[i] = arr[i-1];
+            }
+            arr[index] = num;
+            size++;
+        }
+    }
+
     public void deletion(int index){
         if(isEmpty()){
             System.out.println("Array is Empty");
@@ -53,7 +67,12 @@ public class Array_1D {
         obj.insertion(1);
         obj.insertion(2);
         obj.insertion(3);
-        obj.deletion(1);
+        obj.insertion(4);
+        obj.insertion(5);
+        obj.insertion(6);
+        obj.insertion(7);
+        obj.insertAtIndex(10, 4);
+        obj.deletion(2);
         obj.traversal();
     }
 }

@@ -87,6 +87,8 @@ public class Array_1D {
         } else{
             System.out.println("Element "+num+" is found at "+search+" index");
         }
+        obj.insertAtIndex(10, 4);
+        obj.deletion(2);
         obj.traversal();
     }
 }

@@ -26,8 +26,20 @@ public class Array_1D {
         }
     }
 
+    public void insertion(int num){
+        if(isFull()){
+            System.out.println("Array is Full");
+        } else{
+            arr[size] = num;
+            size++;
+        }
+    }
+
     public static void main(String[] args) {
         Array_1D obj = new Array_1D(10);
+        obj.insertion(1);
+        obj.insertion(2);
+        obj.insertion(3);
         obj.traversal();
     }
 }

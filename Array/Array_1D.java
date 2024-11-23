@@ -35,11 +35,25 @@ public class Array_1D {
         }
     }
 
+    public void deletion(int index){
+        if(isEmpty()){
+            System.out.println("Array is Empty");
+        } else if(size <= index){
+            System.out.println("Invalid Index");
+        } else{
+            for(int i = index;i<size-1;i++){
+                arr[i] = arr[i+1];
+            }
+            size--;
+        }
+    }
+
     public static void main(String[] args) {
         Array_1D obj = new Array_1D(10);
         obj.insertion(1);
         obj.insertion(2);
         obj.insertion(3);
+        obj.deletion(1);
         obj.traversal();
     }
 }

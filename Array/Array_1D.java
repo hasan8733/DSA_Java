@@ -15,6 +15,15 @@ public class Array_1D {
         return size == 0;
     }
 
+    public boolean isSorted(){
+        for(int i=1;i<size;i++){
+            if(arr[i] < arr[i-1]){
+                return false;
+            }
+        }
+        return true;
+    }
+
     public void traversal(){
         if(isEmpty()){
             System.out.println("Array is Empty");

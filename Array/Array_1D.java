@@ -15,15 +15,6 @@ public class Array_1D {
         return size == 0;
     }
 
-    public boolean isSorted(){
-        for(int i=1;i<size;i++){
-            if(arr[i] < arr[i-1]){
-                return false;
-            }
-        }
-        return true;
-    }
-
     public void traversal(){
         if(isEmpty()){
             System.out.println("Array is Empty");
@@ -80,9 +71,25 @@ public class Array_1D {
         return -1;
     }
 
+    public int binarySearch(int num){
+        int lb = 0,ub = size-1,mid;
+        while(lb<=ub){
+            mid = (lb+ub)/2;
+            if(arr[mid] == num){
+                return mid;
+            } else if(arr[mid] > num){
+                ub = mid - 1;
+            } else if(arr[mid] < num){
+                lb = mid + 1;
+            }
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
         Array_1D obj = new Array_1D(10);
         int num = 6;
+        int num1 = 3;
         obj.insertion(1);
         obj.insertion(2);
         obj.insertion(3);
@@ -90,11 +97,18 @@ public class Array_1D {
         obj.insertion(5);
         obj.insertion(6);
         obj.insertion(7);
+        obj.insertion(8);
         int search = obj.linearSearch(num);
         if(search == -1){
             System.out.println("Element not found");
         } else{
             System.out.println("Element "+num+" is found at "+search+" index");
+        }
+        int biSearch = obj.binarySearch(num1);
+        if(biSearch == -1){
+            System.out.println("Element not found");
+        } else{
+            System.out.println("Element "+num1+" is found at "+biSearch+" index");
         }
         obj.insertAtIndex(10, 4);
         obj.deletion(2);

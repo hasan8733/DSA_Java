@@ -34,8 +34,31 @@ public class Array_2D {
         }
     }
 
+    public void insertion(int num) {
+        if (isFull()) {
+            System.out.println("Array is Full");
+        } else {
+            arr[row][col] = num;
+            if (col + 1 == colSize && row + 1 != rowSize) {
+                row++;
+                col = 0;
+            } else {
+                col++;
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        Array_2D obj = new Array_2D(5, 3);
+        Array_2D obj = new Array_2D(3, 3);
+        obj.insertion(1);
+        obj.insertion(2);
+        obj.insertion(3);
+        obj.insertion(4);
+        obj.insertion(5);
+        obj.insertion(6);
+        obj.insertion(7);
+        obj.insertion(8);
+        obj.insertion(9);
         obj.traversal();
     }
 }

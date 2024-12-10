@@ -1,8 +1,8 @@
-public class Array_1D {
+public class Array {
     private int arr[];
     private int size;
 
-    public Array_1D(int capacity) {
+    public Array(int capacity) {
         arr = new int[capacity];
         size = 0;
     }
@@ -87,7 +87,7 @@ public class Array_1D {
     }
 
     public static void main(String[] args) {
-        Array_1D obj = new Array_1D(10);
+        Array obj = new Array(10);
         int num = 6;
         int num1 = 3;
         obj.insertion(1);

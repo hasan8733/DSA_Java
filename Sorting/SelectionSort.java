@@ -8,7 +8,7 @@ public class SelectionSort {
         System.out.println();
     }
 
-    public static void sorting(int arr[]) {
+    public static void sorting(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             int min = i;
 

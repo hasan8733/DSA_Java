@@ -12,6 +12,7 @@ public class QuickSort {
 
     }
 
+    
     public static void main(String[] args) {
         int[] arr = { 8, 5, 3, 2, 7, 9, 1, 6 };
         System.out.println("Before Sorting:");
